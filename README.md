@@ -1,1 +1,0 @@
-# socialdemokratiet-sofie-k-mpel.
