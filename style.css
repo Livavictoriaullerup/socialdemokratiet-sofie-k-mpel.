@@ -1,0 +1,253 @@
+/* ========================================
+   Eksternt stylesheet for Sofie Kümpel website
+   ======================================== */
+
+/* Nulstil margin og padding på alt (*) */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Grundlæggende body-stil */
+body {
+  /* Brugervenlighed: letlæselige skrifttyper
+     Performance: ingen ekstra downloads
+     Målgruppe: passer til både unge og ældre
+     Design: neutral og moderne sans-serif */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  line-height: 1.45;
+  color: #111;
+  background: #fff;
+  padding-bottom: 3rem;
+}
+
+/* ==========================
+   Header og brand/logo
+   ========================== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #aa2323;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+/* Brand/logo */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.brand-name {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+/* ==========================
+   Burger-menu
+   ========================== */
+.burger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 36px;
+  height: 22px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+
+/* ==========================
+   Navigation
+   ========================== */
+.nav {
+  position: absolute;
+  right: 1rem;
+  top: 64px;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: none; /* skjult som standard */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.nav.open {
+  display: block; /* Menuen vises kun, når burger-knappen er trykket (open-klassen aktiveres) */
+}
+.nav ul {
+  list-style: none;
+  min-width: 160px;
+}
+.nav a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  color: #111;
+}
+
+/* ==========================
+   Hero / forsidebanner
+   ========================== */
+.hero {
+  padding: 1.25rem;
+  text-align: center;
+}
+.hero-img {
+  width: 10%;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.lead {
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+/* ==========================
+   Call to Action (CTA) knapper
+   ========================== */
+.cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #891212;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ==========================
+   Cards / indholdskort
+   ========================== */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.card {
+  padding: 0.9rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+.link-small {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #aa2323;
+  text-decoration: none;
+}
+
+/* ==========================
+   Indhold / tekst
+   ========================== */
+.content {
+  line-height: 1.6; /* bedre læsbarhed */
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.content h1,
+.content h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.content p {
+  margin-bottom: 1rem;
+}
+.content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.issue {
+  margin-bottom: 2rem; /* ekstra luft mellem sektioner */
+}
+
+/* ==========================
+   Kontakt og footer
+   ========================== */
+.contact {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   Small note / supplerende info
+   ========================== */
+.small-note {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* ==========================
+   Responsivt design / større skærme
+   ========================== */
+@media (min-width: 700px) {
+  .nav {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+  .nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .burger {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 2rem;
+  }
+  .hero-img {
+    width: 50%;
+    height: auto;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}

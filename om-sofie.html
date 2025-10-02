@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Om Sofie Kümpel</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="img/logo.png" alt="logo" class="logo" />
+        <span class="brand-name">Sofie Kümpel</span>
+      </a>
+      <button
+        id="burger2"
+        class="burger"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav2" class="nav">
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="about.html">Om Sofie</a></li>
+          <li><a href="issues.html">Mærkesager</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article class="bio">
+        <h1>Om Sofie Kümpel</h1>
+        <p>
+          Jeg hedder Sofie Kümpel, og jeg stiller op for Socialdemokratiet i
+          Frederiksberg Kommune. Jeg brænder for, at vores by er et sted, hvor
+          alle kan trives – både børn, unge, voksne og ældre.
+        </p>
+
+        <h2>Baggrund</h2>
+        <p>
+          Jeg er uddannet lærer, og jeg har arbejdet tæt med børn og familier.
+          Jeg har også været aktiv i lokalpolitik i flere år, og jeg bruger
+          rigtig meget tid på at møde borgerne, høre deres historier og finde
+          løsninger, der virkelig virker i hverdagen. Det kan være alt fra bedre
+          skoleoplevelser for vores børn til flere trygge tilbud for vores
+          ældre.
+        </p>
+
+        <h2>Hvorfor stiller jeg op?</h2>
+        <p>
+          Jeg stiller op, fordi jeg vil kæmpe for, at Frederiksberg er en by for
+          alle: 
+          <ul>
+          <li><strong>skoler og fritidstilbud</strong>, hvor vores børn både lærer og har
+          det sjovt så de glæder sig til at gå i skole hver dag. </li>
+          <li><strong>Trygge ældreår</strong>, hvor vores seniorer kan mødes med venner, få hjælp, når de
+          har brug for det, og føle sig trygge i hverdagen. </li>
+          <li><strong>Bæredygtige løsninger</strong>, der gør det nemt at leve grønt, tage cyklen eller smide
+          affaldet korrekt uden at det bliver besværligt for familierne. </li>
+      
+          Jeg stiller op, fordi jeg vil være med til at gøre Frederiksberg til en
+          by, hvor hverdagen fungerer for alle, og hvor vi passer på hinanden og
+          på vores by. Jeg vil gerne høre fra dig dine idéer og bekymringer
+          betyder noget, og sammen kan vi skabe løsninger, der virker i
+          virkeligheden.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© Sofie Kümpel – Socialdemokratiet, Frederiksberg</p>
+    </footer>
+
+    <script>
+      const burger2 = document.getElementById("burger2");
+      const nav2 = document.getElementById("nav2");
+      burger2.addEventListener("click", () => {
+        const expanded = burger2.getAttribute("aria-expanded") === "true";
+        burger2.setAttribute("aria-expanded", String(!expanded));
+        nav2.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

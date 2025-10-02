@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Mærkesager — Sofie Kümpel</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="img/logo.png" alt="logo" class="logo" />
+        <span class="brand-name">Sofie Kümpel</span>
+      </a>
+      <button
+        id="burger3"
+        class="burger"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav3" class="nav">
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="about.html">Om Sofie</a></li>
+          <li><a href="issues.html">Mærkesager</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1>Mærkesager</h1>
+
+      <section id="education" class="issue">
+        <h2>Skoler & Børn</h2>
+        <p>
+          Investering i folkeskolen: mindre klasser, flere pædagoger og fokus på
+          trivsel. Jeg vil styrke inklusionen og give lærere bedre
+          støttemuligheder, så alle børn kan få en god skoleoplevelse. Børn skal
+          også have adgang til meningsfulde fritidstilbud efter skole, såsom
+          sport, kultur og kreative aktiviteter, så de både lærer og har det
+          sjovt. Jeg vil styrke samarbejdet mellem skoler og forældre og sikre
+          et trygt miljø, hvor tidlig indsats mod mobning og social eksklusion
+          prioriteres.
+        </p>
+      </section>
+
+      <section id="climate" class="issue">
+        <h2>Klima & Byrum</h2>
+        <p>
+          Jeg arbejder for grønne tage, bedre regnvandshåndtering og flere træer
+          i gaderne. Cykelvenlige ruter og byrum, der inviterer til ophold, er
+          vigtige for at gøre byen levende og bæredygtig. Jeg vil fremme
+          bæredygtig transport, såsom elektriske busser og gode cykelmuligheder,
+          og støtte lokale initiativer, der skaber grønne oaser, hvor både børn
+          og voksne kan mødes. Fokus på energibesparelse og affaldssortering i
+          kommunale bygninger og institutioner skal styrkes, så bæredygtighed
+          bliver en naturlig del af hverdagen.
+        </p>
+      </section>
+
+      <section id="welfare" class="issue">
+        <h2>Omsorg & Velfærd</h2>
+        <p>
+          Jeg prioriterer kvalitet i hjemmeplejen og ordentlige vilkår for
+          ansatte i ældreplejen. Velfærd fungerer bedst, når den er nærværende
+          og stabil. Jeg vil styrke indsatsen mod ensomhed blandt ældre og skabe
+          lokale aktiviteter, hvor seniorer kan mødes og deltage i sociale
+          fællesskaber. Trygge og tilgængelige sundhedstilbud er en central del
+          af arbejdet, ligesom hurtig og effektiv hjælp til borgere, uanset om
+          det er socialrådgivning, hjemmehjælp eller anden støtte, skal sikres.
+          Gode velfærdsløsninger kræver ressourcer, respekt og fokus på
+          kvalitet.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© Sofie Kümpel – Socialdemokratiet, Frederiksberg</p>
+    </footer>
+
+    <script>
+      const burger3 = document.getElementById("burger3");
+      const nav3 = document.getElementById("nav3");
+      burger3.addEventListener("click", () => {
+        const expanded = burger3.getAttribute("aria-expanded") === "true";
+        burger3.setAttribute("aria-expanded", String(!expanded));
+        nav3.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
